@@ -570,10 +570,57 @@ namespace GameBook
         {
             if (txConsulta.Text == "")
             {
-                MessageBox.Show("Digite o jogo que deseja pesquisar!",
-                            "CONSULTAR",
+                SqlConnection conn;
+                SqlCommand comm;
+
+                string connectionString = Properties.Settings.Default.GameConnectionString;
+
+                conn = new SqlConnection(connectionString);
+
+                comm = new SqlCommand("SELECT * FROM Jogos", conn);
+
+                try
+                {
+                    // Tenta abrir uma conexão com o BD
+                    try
+                    {
+                        conn.Open();
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show(error.Message,
+                            "Erro ao tentar executar o comando SQL",
                             MessageBoxButtons.OK,
-                            MessageBoxIcon.Information);
+                            MessageBoxIcon.Error);
+                    }
+
+                    try
+                    {
+                        SqlDataAdapter da = new SqlDataAdapter(comm);
+                        DataTable dt = new DataTable();
+                        DataSet ds = new DataSet();
+                        da.Fill(ds);
+                        da.Fill(dt);
+                        GridView1.DataSource = dt;
+
+                        conn.Close();
+
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show(error.Message,
+                            "Erro ao tentar executar o comando SQL",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                    }
+
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message,
+                        "Erro ao executar comando SQL",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
@@ -1497,6 +1544,61 @@ namespace GameBook
                         "Erro ao executar comando SQL",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message,
+                        "Erro ao tentar executar o comando SQL",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message,
+                    "Erro ao executar comando SQL",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void viewLogs_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn;
+            SqlCommand comm;
+
+            string connectionString = Properties.Settings.Default.GameConnectionString;
+
+            conn = new SqlConnection(connectionString);
+
+            comm = new SqlCommand("SELECT B.ID_Jogo, B.Nome_Jogo, B.Data_Operacao FROM BackupJogos AS B", conn);
+           
+            try
+            {
+                // Tenta abrir uma conexão com o BD
+                try
+                {
+                    conn.Open();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message,
+                        "Erro ao tentar executar o comando SQL",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+
+                try
+                {
+                    SqlDataAdapter da = new SqlDataAdapter(comm);
+                    DataTable dt = new DataTable();
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    da.Fill(dt);
+                    GridView1.DataSource = dt;
+
+                    conn.Close();
+
                 }
                 catch (Exception error)
                 {

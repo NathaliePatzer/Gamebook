@@ -78,6 +78,7 @@
             this.txIdGenero = new System.Windows.Forms.TextBox();
             this.txIdPlataforma = new System.Windows.Forms.TextBox();
             this.txIdAvaliacao = new System.Windows.Forms.TextBox();
+            this.viewLogs = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generosBindingSource)).BeginInit();
@@ -635,11 +636,24 @@
             this.txIdAvaliacao.Size = new System.Drawing.Size(21, 20);
             this.txIdAvaliacao.TabIndex = 44;
             // 
+            // viewLogs
+            // 
+            this.viewLogs.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("viewLogs.BackgroundImage")));
+            this.viewLogs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.viewLogs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewLogs.Location = new System.Drawing.Point(934, 12);
+            this.viewLogs.Name = "viewLogs";
+            this.viewLogs.Size = new System.Drawing.Size(37, 34);
+            this.viewLogs.TabIndex = 45;
+            this.viewLogs.UseVisualStyleBackColor = true;
+            this.viewLogs.Click += new System.EventHandler(this.viewLogs_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(983, 684);
+            this.Controls.Add(this.viewLogs);
             this.Controls.Add(this.txIdAvaliacao);
             this.Controls.Add(this.txIdPlataforma);
             this.Controls.Add(this.txIdGenero);
@@ -746,6 +760,7 @@
         private System.Windows.Forms.TextBox txIdGenero;
         private System.Windows.Forms.TextBox txIdPlataforma;
         private System.Windows.Forms.TextBox txIdAvaliacao;
+        private System.Windows.Forms.Button viewLogs;
     }
 }
 
