@@ -1,0 +1,20 @@
+C:\GameBook\GameBook\bin\Debug\GameBook.exe.config
+C:\GameBook\GameBook\bin\Debug\GameBook.exe
+C:\GameBook\GameBook\bin\Debug\GameBook.pdb
+C:\GameBook\GameBook\obj\Debug\GameBook.csproj.AssemblyReference.cache
+C:\GameBook\GameBook\obj\Debug\GameBook.GameBook.resources
+C:\GameBook\GameBook\obj\Debug\GameBook.Properties.Resources.resources
+C:\GameBook\GameBook\obj\Debug\GameBook.csproj.GenerateResource.cache
+C:\GameBook\GameBook\obj\Debug\GameBook.csproj.CoreCompileInputs.cache
+C:\GameBook\GameBook\obj\Debug\GameBook.exe
+C:\GameBook\GameBook\obj\Debug\GameBook.pdb
+C:\Users\natha\OneDrive\Área de Trabalho\GameBook\GameBook\obj\Debug\GameBook.csproj.AssemblyReference.cache
+C:\Users\natha\OneDrive\Área de Trabalho\GameBook\GameBook\obj\Debug\GameBook.exe
+C:\Users\natha\OneDrive\Área de Trabalho\GameBook\GameBook\obj\Debug\GameBook.pdb
+C:\Users\natha\OneDrive\Área de Trabalho\GameBook\GameBook\bin\Debug\GameBook.exe.config
+C:\Users\natha\OneDrive\Área de Trabalho\GameBook\GameBook\bin\Debug\GameBook.exe
+C:\Users\natha\OneDrive\Área de Trabalho\GameBook\GameBook\bin\Debug\GameBook.pdb
+C:\Users\natha\OneDrive\Área de Trabalho\GameBook\GameBook\obj\Debug\GameBook.Form1.resources
+C:\Users\natha\OneDrive\Área de Trabalho\GameBook\GameBook\obj\Debug\GameBook.Properties.Resources.resources
+C:\Users\natha\OneDrive\Área de Trabalho\GameBook\GameBook\obj\Debug\GameBook.csproj.GenerateResource.cache
+C:\Users\natha\OneDrive\Área de Trabalho\GameBook\GameBook\obj\Debug\GameBook.csproj.CoreCompileInputs.cache
